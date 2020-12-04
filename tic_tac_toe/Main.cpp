@@ -21,7 +21,7 @@ void get_all_states_impl(stateType current_state, int current_symbol, stateDict&
 			{
 				new_state = current_state.next_state(i, j, current_symbol);
 				new_hash = new_state.hash();
-				// all_statesÖĞµÄkeyÖµÊÇ²¿ÖØ¸´µÄ,count=0,±íÊ¾²»´æÔÚ
+				// all_statesä¸­çš„keyå€¼æ˜¯éƒ¨é‡å¤çš„,count=0,è¡¨ç¤ºä¸å­˜åœ¨
 				if (all_states.count(new_hash) == 0)
 				{
 					is_end = new_state.is_end();
@@ -84,8 +84,8 @@ int main()
 		p1.backup();
 		p2.backup();
 	}
-	p1.save_policy("E:\\rl_policy\\p1_policy.txt");
-	p2.save_policy("E:\\rl_policy\\p2_policy.txt");
+	p1.save_policy("X:\\rl_policy\\p1_policy.txt");
+	p2.save_policy("X:\\rl_policy\\p2_policy.txt");
     // human vs p1
 	humanType wjh(1);  // symbol = 1
 	play(wjh, p1);
